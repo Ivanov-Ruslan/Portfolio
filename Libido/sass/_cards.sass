@@ -1,0 +1,63 @@
+.cards
+    position: relative
+    padding-bottom: 79px
+    &::after 
+        content: ''
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: -67px
+        background: url(../img/cards/bg.png) -3% 122% no-repeat
+        z-index: -1
+    h2 
+        margin: 60px 0 40px 0
+        text-align: center
+
+.cards_row
+    +flex(flex-end,stretch)
+    margin-right: -25px
+    &:first-of-type
+        margin-bottom: 25px
+    .cards_row_item
+        margin-right: 25px
+        max-width: 200px
+        background-color: #fff
+        color: #000
+        border-radius: $bdr_large
+        img 
+            display: block
+            width: 100%
+            border-top-left-radius: $bdr_large
+            border-top-right-radius: $bdr_large
+        p 
+            font-weight: bold
+            padding: 25px 0
+            text-align: center
+
+
+@media screen and (max-width: 480px)
+    .cards
+        padding: 35px 0 0 0
+        &::after 
+            content: ''
+            height: 0
+            width: 0
+        h2 
+            margin: 0 0 20px 0
+
+    .cards_row
+        +flex(flex-start,stretch)
+        flex-direction: column
+        margin-right: 0
+        &:first-of-type
+            margin-bottom: 0
+        .cards_row_item
+            margin-right: 0
+            max-width: 100%
+            border-radius: 0
+            border-bottom: 1px solid #c1c1c1
+            img 
+                height: 280px
+                border-top-left-radius: 0
+                border-top-right-radius: 0

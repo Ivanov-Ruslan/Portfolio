@@ -1,0 +1,121 @@
+header
+    position: relative
+    +bg(url(../img/header.jpeg),no-repeat,cover)
+
+.logo 
+    padding: 20px
+    font-size: 15px
+    +flex(space-between,flex-start,row)
+    .description 
+        +style_letter(bold,2px,6px)
+        .fortyLogo 
+            padding: 5px 10px
+            background-color: white
+            color: #242943
+        &:hover    
+            +hover-BlueColor()
+        &:hover .fortyLogo   // меняем бекраунд логотипа в белом кубике, при наведении на сам логотип
+            background-color: $col_blue-hover
+        .fa-bars 
+            font-size: 18px
+
+.hrHeader
+    margin: 50px 0
+    height: 2px
+    background-color: white
+    border: none
+
+.content
+    width: 80%
+    padding: 220px
+    .title 
+        font-size: 55px
+    .flex-row
+        +flex(flex-start,flex-start,row)
+        .desc
+            +style_letter(bold,2px,0.25em)
+            margin-right: 10px
+            line-height: 1.5em
+            width: 576px
+        .btn-get_started
+            position: relative
+            border: 2px solid white
+            padding: 17px 65px 17px 20px
+            margin-top: -7px
+            +style_letter(bold,0.25em,0.25em) 
+            &::after
+                content: '\2192'
+                position: absolute
+                top: -3px
+                right: 11px
+                font-size: 40px
+            &:hover 
+                +hover-BlueColor()
+                border-color: $col_blue-hover
+
+@media screen and (max-width: 1280px)  
+    .logo 
+        font-size: 11px
+
+    .content
+        width: 90%
+        padding: 220px 110px
+        .title 
+            font-size: 45px
+        .flex-row
+            .desc
+                margin-right: 0
+                width: 427px
+            .btn-get_started
+                padding: 14px 65px 14px 20px
+                &::after
+                    top: -7px
+
+@media screen and (max-width: 980px) 
+    .content
+        padding: 220px 50px
+
+@media screen and (max-width: 736px)
+    .content
+        padding: 40px 20px
+        .title 
+            font-size: 30px
+        .flex-row
+            +flex(flex-start,flex-start,column)
+            align-items: flex-start
+            .btn-get_started
+                margin-top: 25px
+        
+    .hrHeader
+        margin: 30px 0
+
+@media screen and (max-width: 480px)
+    .logo
+        .description
+            .fa-bars
+                margin-top: -6px
+                font-size: 25px
+            .None480px
+                display: none
+
+    .content 
+        padding: 94px 25px
+
+    .hrHeader
+        margin: 20px 0
+            
+
+
+
+
+            
+
+
+                
+
+                
+                
+                
+
+
+

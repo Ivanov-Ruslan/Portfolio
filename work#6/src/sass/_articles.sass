@@ -1,0 +1,57 @@
+.wraper_articles
+    padding: $pad_wraper
+    padding-bottom: 0
+    .border_btm_article
+        padding-bottom: 45px
+        border-bottom: $border-style
+        .article
+            +flex(flex-start)
+            border-bottom: 1px dotted rgba(160, 160, 160, 0.3)
+            padding: 25px 0
+            &:first-child
+                padding-top: 0
+            &:last-child
+                padding-bottom: 0
+                border-bottom: none
+            .img_article
+                img 
+                    display: block
+                    height: 100%
+            .inside_article_wraper
+                margin-left: 20px
+                .dates 
+                    font-size: 0.6em
+
+
+@media screen and (min-width: 480px)
+    .wraper_articles
+        .article
+        .img_article
+            img 
+                display: block
+                width: 65px
+        .inside_article_wraper
+            .title_style
+                +textDecor(800,0.08em,0.2em)
+
+
+@media screen and (min-width: 736px)
+    .wraper_articles
+        padding: 45px 40px 0 40px
+
+
+@media screen and (min-width: 980px)
+    .wraper_articles
+        padding: 50px 50px 0 50px
+        .border_btm_article
+            padding-bottom: 50px
+
+
+@media screen and (min-width: 1280px)
+    .wraper_articles
+        float: left
+        width: 30%
+        padding: 0
+        .border_btm_article
+            padding: 50px 50px 50px 0
+

@@ -1,0 +1,13 @@
+@mixin flex($jc)
+    display: flex
+    justify-content: $jc
+
+@mixin textDecor($fw, $lspacing, $wspacing)
+    text-transform: uppercase
+    font-weight: $fw
+    letter-spacing: $lspacing
+    word-spacing: $wspacing
+
+@mixin color_hover()
+    color: $col-hover
+    cursor: pointer

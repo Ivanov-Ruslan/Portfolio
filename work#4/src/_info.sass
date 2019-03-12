@@ -1,0 +1,86 @@
+.info
+    background: $col-bgInputs
+    padding: 120px 220px
+    .sub_title
+        font: bold 35px 'Source Sans Pro', sans-serif
+        letter-spacing: 0.05em
+    .hrPhotho
+        margin: 20px 0 40px 0
+        width: 260px
+        height: 2px
+        background-color: white
+        border: none
+    .sentanse
+        letter-spacing: 0.05em
+        font: 300 22px 'Source Sans Pro', sans-serif
+        line-height: 1.7em
+    .btn-get_started
+            width: 220px
+            position: relative
+            border: 2px solid white
+            padding: 17px 65px 17px 20px
+            margin-top: 40px
+            +style_letter(bold,0.25em,0.25em) 
+            &::after
+                content: '\2192'
+                position: absolute
+                top: -3px
+                right: 11px
+                font-size: 40px
+            &:hover 
+                +hover-BlueColor()
+                border-color: $col_blue-hover
+                
+@media screen and (max-width: 1680px)  
+    .info
+        padding: 45px 220px
+        .sub_title
+            font-size: 30px
+        .hrPhotho
+            width: 190px
+        .sentanse
+            font-size: 18px
+
+@media screen and (max-width: 1280px)  
+    .info
+        padding: 50px 110px
+        .sub_title
+            font-size: 25px
+        .hrPhotho
+            width: 180px
+            margin: 20px 0 30px 0
+        .sentanse
+            font-size: 16px
+        .btn-get_started
+            width: 190px
+            padding: 14px 65px 14px 20px
+            margin-top: 30px
+            &::after
+                top: -7px
+
+@media screen and (max-width: 980px) 
+    .info
+        padding: 60px 50px
+
+@media screen and (max-width: 736px)
+    .info
+        padding: 50px 20px
+        .sub_title
+            font-size: 23px
+        .hrPhotho
+            width: 140px
+            margin: 10px 0 25px 0
+        .sentanse
+            font-size: 15px
+        .btn-get_started
+            margin-top: 25px
+
+@media screen and (max-width: 480px)
+    .info
+        padding: 50px 25px
+        .hrPhotho
+            margin: 10px 0 20px 0
+        .btn-get_started
+            margin-top: 20px
+
+

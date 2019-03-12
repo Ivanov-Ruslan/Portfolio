@@ -1,0 +1,61 @@
+footer 
+    background: rgb(36, 41, 67)
+    border-top: 1px solid $border-colFooter
+    padding: 70px 50px 70px 200px
+    .fa
+        margin-right: 20px
+        font-size: 30px
+        color: #fff
+    .foot-info
+        +flex(flex-start,flex-start,row)
+        margin-top: $mg-bottom_forms
+        .inform
+            font-weight: 200
+            font-size: 16px
+            color: rgba(244, 244, 255, 0.2)
+            .underLine
+                border-bottom: 1px dotted rgba(244, 244, 255, 0.2)
+                cursor: pointer
+                &:hover
+                    color: $col_blue-hover
+                    border: none
+        .inform:first-child
+            padding-right: 15px
+        .inform:last-child
+            padding-left: 15px
+        .inform:nth-child(2)
+            padding-left: 15px
+            padding-right: 15px
+            border-right: 1px solid $border-colFooter
+            border-left: 1px solid $border-colFooter
+
+@media screen and (max-width: 1280px)
+    footer 
+        padding: 60px 50px 60px 100px
+        .foot-info
+            margin-top: 25px
+            .inform
+                font-size: 14px
+        .fa 
+            font-size: 25px
+
+@media screen and (max-width: 736px)
+    footer 
+        padding: 50px 20px 50px 20px
+        .foot-info
+            .inform
+                font-size: 12px
+
+@media screen and (max-width: 480px)
+    footer 
+        .foot-info
+            +flex(flex-start,flex-start,column)
+            .inform:nth-child(2)
+                padding: 0
+                border: none
+                margin-top: 5px
+                margin-bottom: 5px
+            .inform:first-child
+                padding-right: 0
+            .inform:last-child
+                padding-left: 0

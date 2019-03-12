@@ -1,0 +1,122 @@
+.panelPhoto
+    +flex(flex-start,flex-start,row)
+    flex-wrap: wrap
+    .photo_block:nth-child(1), 
+    .photo_block:nth-child(4),
+    .photo_block:nth-child(5) 
+        width: 40% 
+    .photo_block:nth-child(2), 
+    .photo_block:nth-child(3), 
+    .photo_block:nth-child(6) 
+        width: 60%
+    .photo_block
+        position: relative
+        padding: 210px 0 210px 100px 
+        cursor: pointer
+        &:hover::after // при наведении пропадает цветной псевдоэлемент
+            transition: all 0.6s ease
+            opacity: 0
+
+.photo_block:nth-child(1) // каждому блоку ставим картинку
+    +bg(url(../img/pic1.jpeg),no-repeat,cover)
+    &::after // создаем пвевдоэлемент с цветным фоном при наведении пропадает
+        +color-imageEfect(#6fc3df)
+.photo_block:nth-child(2)
+    +bg(url(../img/pic2.jpg),no-repeat,cover)
+    &::after
+        +color-imageEfect(#8d82c4)
+.photo_block:nth-child(3)
+    +bg(url(../img/pic3.jpg),no-repeat,cover)
+    &::after
+        +color-imageEfect(#ec8d81)
+.photo_block:nth-child(4)
+    +bg(url(../img/pic4.jpg),no-repeat,cover)
+    &::after
+        +color-imageEfect(#e7b788)
+.photo_block:nth-child(5)
+    +bg(url(../img/pic5.jpg),no-repeat,cover)
+    &::after
+        +color-imageEfect(#8ea9e8)
+.photo_block:nth-child(6)
+    +bg(url(../img/pic6.jpeg),no-repeat,cover)
+    &::after
+        +color-imageEfect(#87c5a4)
+
+// блоку с контентом задаем релатив и индекс для отоббражения поверх псевдоэелемента цветного  
+.titlePic 
+    position: relative
+    z-index: 1
+    .sub_title
+        font-size: 35px  
+        font-family: 'Source Sans Pro', sans-serif
+    .hrPhotho
+        margin: 25px 0
+        width: 260px
+        height: 2px
+        background-color: white
+        border: none
+    .photoSubsription
+        +style_letter(bold,0.25em,0.25em)
+
+@media screen and (max-width: 1280px)  
+    .panelPhoto
+        .photo_block
+            padding: 110px 0 110px 50px
+
+    .titlePic 
+        .sub_title
+            font-size: 30px  
+        .hrPhotho
+            margin: 20px 0
+            width: 225px
+        .photoSubsription
+            +style_letter(bold,0,0.25em)
+
+@media screen and (max-width: 980px) 
+    .panelPhoto
+        .photo_block:nth-child(1), 
+        .photo_block:nth-child(4),
+        .photo_block:nth-child(5) 
+            width: 50% 
+        .photo_block:nth-child(2), 
+        .photo_block:nth-child(3),
+        .photo_block:nth-child(6) 
+            width: 50%
+        .photo_block
+            padding: 110px 0 110px 50px
+
+    .titlePic 
+        .sub_title
+            font-size: 25px  
+            font-weight: bold
+        .hrPhotho
+            margin: 20px 0
+
+@media screen and (max-width: 736px)
+    .panelPhoto
+        .photo_block
+            padding: 90px 0 90px 20px
+
+    .titlePic 
+        .sub_title
+            font-size: 25px  
+            font-weight: 500
+        .hrPhotho
+            margin: 15px 0
+
+@media screen and (max-width: 480px)
+    .panelPhoto
+        +flex(flex-start,flex-start,column)
+        .photo_block:nth-child(1), 
+        .photo_block:nth-child(4),
+        .photo_block:nth-child(5) 
+            width: 100%
+        .photo_block:nth-child(2), 
+        .photo_block:nth-child(3),
+        .photo_block:nth-child(6) 
+            width: 100%
+        .photo_block
+            padding: 115px 0 115px 20px
+
+
+        

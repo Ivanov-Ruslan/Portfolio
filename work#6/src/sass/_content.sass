@@ -1,0 +1,190 @@
+.blog
+    margin-bottom: 40px
+    background-color: #ffffff
+    text-align: center
+    border: 
+        top: $border-style
+        bottom: $border-style
+    .head_card
+        padding: 50px 40px
+        font-family: "Raleway", Helvetica, sans-serif
+        .titleCard
+            font-size: 1em
+            letter-spacing: 0.15em
+            line-height: 2em
+            &:hover
+                +color_hover()
+        .titleSubs
+            margin-top: 10px
+        .avatar_girl
+            margin-top: 10px
+        .dates
+            margin-top: 25px
+            font-weight: 800
+        .date_avatar
+            .decoration_span
+                display: none
+    .imgCard
+        overflow: hidden
+        img  
+            display: block
+            width: 100%
+            transition: transform 0.2s ease-out
+            &:hover
+                transform: scale(1.05)
+      
+    .common
+        padding: 25px 20px 45px 20px
+        .sentanse
+            text-align: left
+        .chat
+            margin: 30px 0
+            text-align: center
+            font-size: 11px
+            span:first-child
+                margin-right: 10px
+                text-transform: uppercase
+                letter-spacing: 0.1em
+            span:nth-child(2)
+                padding-right: 10px
+            .fa-heart,
+            .fa-comment
+                padding: 0 10px
+                color: rgba(160, 160, 160, 0.3)
+                border-left: $border-style
+
+.btn_block
+    padding: $pad_wraper
+    margin-top: -40px // обнулил mrg который установлен .blog
+    .btn_mob:first-child
+        margin-bottom: 20px
+        color: rgba(160, 160, 160, 0.3)
+
+
+@media screen and (min-width: 480px)
+    .blog
+        .imgCard.pic1,
+        .imgCard.pic2,
+        .imgCard.pic3
+            margin: 20px
+            margin-bottom: 0
+        .head_card
+            border-bottom: $border-style
+            .date_avatar
+                margin-top: 30px
+                +flex(center)
+                align-items: center
+                .block_ava
+                    padding-left: $pad_elements
+                    border-left: $border-style
+                    .avatar_girl
+                        margin-top: 0
+                .dates
+                    margin-top: 0
+                    padding-right: $pad_elements
+                .decoration_span
+                    margin-left: $pad_elements
+                    text-transform: uppercase
+                    font-size: $fontSize_subTitle
+                    letter-spacing: 0.1em
+
+    .btn_block
+        +flex(flex-start)
+        .btn_mob
+            padding: 15px 30px 
+        .btn_mob:first-child
+            margin-bottom: 0
+            margin-right: 20px
+
+
+@media screen and (min-width: 736px)
+    .blog
+        .head_card
+            padding: 60px 40px
+        .common
+            padding: 20px 40px 40px 40px
+            .chat_and_btn
+                margin-top: 30px
+                +flex(space-between)
+                align-items: baseline
+                .chat
+                    margin: 0
+                    order: 1
+                .btn_mob
+                    padding: 15px 30px
+
+    .btn_block
+        padding-left: 40px
+
+@media screen and (min-width: 980px)
+    .content
+        margin: 0 50px
+
+    .blog
+        border: $border-style
+        .head_card
+            +flex(flex-start)
+            padding: 0
+            .block1st
+                width: 70%
+                text-align: left
+                padding: 50px
+            .date_avatar
+                +flex(flex-start)
+                align-items: flex-end
+                flex-direction: column
+                padding: 50px
+                margin-top: 0
+                width: 30%
+                border-left: $border-style
+                .dates
+                    padding-right: 0
+                .name_and_ava
+                    +flex(flex-start)
+                    margin-top: 17px
+                    align-items: center
+                    .block_ava
+                        border-left: none
+                        padding-left: 10px
+                    .decoration_span
+                        order: -1
+                        display: block
+        .common
+            padding: 0 50px 50px 50px
+            .chat_and_btn
+                    margin-top: 25px
+
+    .btn_block
+        padding: 50px 0
+
+
+@media screen and (min-width: 1280px)
+    .content
+        float: right
+        width: 70%
+        margin: 0
+        
+    .imgCard
+        margin: 50px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+        
+        
+                
+        
+        
+

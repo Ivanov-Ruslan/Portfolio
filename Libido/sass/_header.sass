@@ -1,0 +1,324 @@
+.header 
+    position: relative
+    background-image: url(../img/header/girl_and_boy.png)
+    background-position-x: 48%
+    &::before
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        bottom: 0
+        left: 0%
+        background-image: url(../img/header/fire.png)
+        z-index: -1
+
+.header_logo
+    +flex(flex-start, flex-end)
+    padding: 20px 0 20px 0
+    .header_logo_item1
+        margin-right: 90px
+    .header_logo_item2
+        +flex(flex-start,center)
+        margin-right: 30px
+    .header_logo_item3
+        +flex(flex-start,center)
+    .header_logo_item2 span,
+    .header_logo_item3 span
+        margin-right: 5px
+        font-size: 20px
+        font-weight: bold
+
+h1 
+    margin-bottom: 20px
+    font-size: 60px
+    font-family: 'Roboto Condensed', sans-serif
+    background: linear-gradient(#f0e394, #b49b52)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+.header_col--left
+    float: left
+    width: 330px
+    .header_subs_text
+        margin-bottom: 20px
+        font: 500 22px 'Roboto', sans-serif
+        letter-spacing: 0.03em
+    .header_list
+        margin-bottom: 15px
+        li 
+            position: relative
+            +flex(flex-start,center)
+            padding: 15px 0
+            &:first-child
+                padding-top: 0
+            &::after
+                content: ''
+                width: 100%
+                height: 1px
+                position: absolute
+                bottom: 0
+                left: 0
+                background: linear-gradient(90deg, transparent -2%, #fff, transparent 81%)
+                opacity: 0.6
+            &:last-child::after
+                content: ''
+                width: 0
+                height: 0
+            .header_list_text--apcity
+                color: rgba(255, 255, 255, 0.7)
+            .header_list_circle
+                position: relative
+                margin-right: 10px
+                display: inline-block
+                height: 25px
+                width: 25px
+                border-radius: 100%
+                border: 1px solid rgba(240, 227, 146, 0.5)
+                background: linear-gradient(#fc481a, #ca3a15)
+                .fa-check
+                    position: absolute
+                    top: 19%
+                    left: 15%
+    .header_product_pic
+        position: relative
+        .header_product_pic--mirror
+            position: absolute
+            top: 99%
+            left: 0
+            transform: scale(1, -1)
+            z-index: -1
+        .header_bottle_pic
+            display: block
+            position: absolute
+            width: 250px
+            top: 30px
+            right: -51px
+        .header_bottle_pic--mirror
+            position: absolute
+            top: 98%
+            left: 131px
+            width: 250px
+            transform: scale(1, -1)
+            z-index: -1
+            
+.header-col--right
+    float: right
+    width: 290px
+    .header-numbers
+        +flex(flex-start,scretch)
+        margin-bottom: 25px
+        .numbers_numbers
+            margin-right: 25px
+            span 
+                position: relative
+                display: inline-block
+                font-size: 50px
+                line-height: 1
+                padding: 5px 7px
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75) 
+                color: black
+                border-radius: 3px
+                background-color: #fff
+                font-weight: bold
+                text-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
+                &:first-child 
+                    opacity: 0.5
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 50%
+                    height: 1px
+                    width: 100%
+                    background-color: #cecece
+        .number_text
+            position: relative
+            font-size: 19px
+            &::before 
+                content: '*'
+                position: absolute
+                left: -10px
+                top: 0
+
+.header-col--right
+    .header_form
+        background-color: #fff
+        border-radius: $bdr_large
+        box-shadow: 0px 0px 126px 1px rgba(254,213,91,0.3)
+        .wraper_form_price_block
+            position: relative
+            background-color: #771d0e
+            border-radius: 0% 0% 40% 40%/0% 0% 20% 20% 
+            border-top-right-radius: 10px
+            border-top-left-radius: 10px
+            &::after // яркое свечение в топе формы
+                content: ''
+                position: absolute
+                top: -11px
+                left: 17px
+                width: 100px
+                height: 24px
+                background: url(../img/header/star.png) 0 0 no-repeat
+            &::before // полупрозрачный белый фон на ценнике, с правым круглым бардюром
+                content: ''
+                height: 100%
+                width: 49%
+                position: absolute
+                top: 0
+                left: 0
+                background-color: #fff
+                opacity: 0.2
+                border-radius: 0% 13% 13% 89%/0% 45% 45% 15%
+                border-top-left-radius: 10px
+            .form_price_block
+                padding: 10px 15px 25px 15px
+                +flex(space-between,stretch)
+                font-size: 18px
+                .price1
+                    color: rgba(255, 255, 255, 0.6)
+                    .price_sum1
+                        position: relative
+                        font-size: 35px 
+                        display: inline-block
+                        &::before 
+                            content: ''
+                            height: 2px
+                            width: 100%
+                            position: absolute
+                            top: 50%
+                            left: 0
+                            background-color: #fff
+                            opacity: 0.6
+                .price2
+                    .price_sum2
+                        font-size: 35px
+                        font-weight: bold
+        .wraper_form_content
+            padding: 25px 15px 10px 15px
+            input[type="text"],
+            input[type="tel"]
+                padding: 20px 15px
+                width: 100%
+                background-color: #f6f6f6
+                color: #929292
+                font: 14px 'Open Sans', sans-serif
+                outline: none
+                border-radius: $bdr
+                border: 1px solid #929292
+            input[type="text"]
+                margin-bottom: 20px
+            input[type="tel"]
+                margin-bottom: 25px
+            .form_btn
+                position: relative
+                padding: 20px 25px 20px 15px
+                width: 100%
+                background-color: #ea4519
+                color: white
+                outline: none
+                border: none
+                border-radius: $bdr
+                font-weight: bold
+                font-size: 16px
+                text-align: right
+                cursor: pointer
+                &::before 
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0
+                    height: 100%
+                    width: 20%
+                    background-color: #b13412
+                    border-top-left-radius: $bdr
+                    border-bottom-left-radius: $bdr
+                .fa-chevron-right
+                    position: absolute
+                    top: 33%
+                    left: 7%
+                    font-size: 20px
+            .secureText
+                margin: 25px 0 10px 0
+                color: black
+                font-size: 13px
+                img 
+                    position: relative
+                    top: 3px
+
+.header_sale
+    position: absolute
+    bottom: 0
+    left: 38%
+    text-align: center
+    p 
+        margin-top: 10px
+
+
+@media screen and (max-width: 480px)
+    .header 
+        padding: 35px 20px 0 20px
+        background-image: none
+        &::before
+            left: 32%
+
+    .header_logo
+        padding: 0
+        margin-bottom: 20px
+        .header_logo_item1
+            width: 100%
+            margin-right: 0
+        .header_logo_item2,
+        .header_logo_item3
+            display: none
+
+    h1 
+        margin-bottom: 20px
+        font-size: 33px
+
+    .header_col--left
+        float: none
+        margin-bottom: 40px
+        width: 100%
+        .header_product_pic
+            display: none
+        .header_list
+            li
+                .header_list_text--apcity
+                    color: white
+    
+    .header-col--right
+        float: none
+        width: 100%
+        .header_form
+            .wraper_form_price_block
+                padding: 25px 45px 0px 45px
+            .wraper_form_content
+                padding-bottom: 35px
+                .form_btn
+                    padding: 20px 20%
+                    font-size: 20px
+                input[type="text"],
+                input[type="tel"]
+                    font-size: 20px
+                .secureText
+                    font-size: 16px
+                    margin-left: 15px
+                img 
+                    left: -9px
+                    width: 16px
+
+                    
+    .header_sale
+        display: none
+     
+                    
+            
+            
+
+                    
+
+              
+           
+ 
+
+

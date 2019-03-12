@@ -1,0 +1,150 @@
+.block_with_forms
+    position: relative
+    background-color: #5e42a6
+    padding: 70px 110px
+    h2
+        color: $default_color
+    p 
+        +p_after-h2()
+    a
+        position: absolute
+        left: 0
+        top: 0
+    h5 
+        margin-bottom: $mrg_top-input
+        color: $default_color
+        width: 48%
+    .form_wraper
+        +flex(flex-start,flex-start,row)
+        .input_block
+            border-right: 1px solid rgba(255, 255, 255, 0.15)
+            width: 65%
+            padding-right: 60px
+            .btn
+                margin-top: $mrg_top-input  
+            .textForms
+                +flex(space-between,flex-start,row)
+                flex-wrap: wrap
+               
+input
+    width: 48%
+    height: 50px
+    border: $styleBorder
+    background-color: $bg_col-input
+    border-radius: $border_rad-input
+    font-size: 18px
+    color: white
+    outline: none
+    padding-left: 20px    
+    &:focus
+        border: 2px solid $default_color
+
+textarea
+    width: 100%
+    height: 250px
+    background-color: $bg_col-input
+    border-radius: $border_rad-input
+    border: $styleBorder
+    outline: none
+    font-size: 18px
+    color: white
+    padding: 20px
+    &:focus
+        border: 2px solid $default_color 
+
+.input_block > h5 
+    margin-top: 40px 
+
+.asideInfo
+    margin-left: 60px
+    p 
+        margin: 0 0 45px 0
+    .fa 
+        margin-right: 15px
+
+
+@media only screen and (max-width: 1680px)
+    .block_with_forms
+        padding: 70px 80px
+
+@media only screen and (max-width: 1280px)
+    .block_with_forms
+        padding: $pad_main-1280px
+        > a
+            position: absolute
+            left: 0
+            top: -50px
+        .asideInfo
+            h5 
+                margin-bottom: 5px
+            p 
+                margin: 0 0 30px 0
+            .fa 
+                font-size: 17px
+
+    textarea
+        height: 200px
+
+        
+@media screen and (max-width: 980px)
+    .block_with_forms    
+        padding: 60px
+        h5 
+            margin-bottom: 5px
+            font-size: 17px
+            width: 48%
+        .form_wraper
+            +flex(flex-start,flex-start,column)
+            .input_block
+                width: 100%
+                padding-right: 0
+                padding-bottom: 70px
+                border-right: none
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15)
+                input 
+                    margin-top: 10px       
+        .asideInfo
+            margin: 50px 0 0 0
+            p 
+                margin: 0 0 35px 0
+            .fa 
+                margin-right: 15px
+                font-size: 17px
+
+    textarea
+        margin-top: $mrg_top-input 
+        height: 200px 
+
+
+@media screen and (max-width: 480px)
+    .block_with_forms    
+        padding: $pad_main-480px
+        .form_wraper
+            .input_block
+                padding-bottom: 30px
+                .textForms
+                    +flex(flex-start,flex-start,column)
+                    input
+                        width: 100%
+                        margin-top: 5px
+                    h5:nth-child(2)
+                        margin-top: 30px
+                        order: 1
+            .asideInfo
+                p 
+                    margin: 0 0 30px 0
+            .fa 
+                font-size: 17px
+                margin-right: 5px
+
+    input:last-child
+        order: 2
+
+    textarea
+        margin-top: 5px
+        height: 150px
+                   
+                      
+            
+
+

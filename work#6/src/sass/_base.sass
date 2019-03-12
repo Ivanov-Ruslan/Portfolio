@@ -1,0 +1,65 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    text-decoration: none
+    list-style: none
+
+body 
+    color: #646464
+    font-family: "Source Sans Pro", Helvetica, sans-serif
+    font-weight: 400
+    line-height: 1.75
+    background-color: #f4f4f4
+
+h3 
+    font: 900 1.20em "Raleway", Helvetica, sans-serif
+    color: #3c3b3b
+    letter-spacing: 0.25em
+    text-transform: uppercase
+
+.decoration_span
+    border-bottom: 1px dotted #646464
+    &:hover 
+        +color_hover()
+        border: none
+
+.titleSubs
+    +textDecor(normal,0.2em,0.30em)
+    font-size: 0.7em
+    line-height: 2.5em
+    
+.btn_mob
+    padding: 15px 0
+    +textDecor(800,0.20em,0.30em)
+    font-size: $fontSize_subTitle
+    border: $border-style
+    text-align: center
+    &:hover
+        +color_hover()
+        border-color: $col-hover
+
+.dates
+    +textDecor(normal,0.2em,0.30em)
+    font-size: $fontSize_subTitle
+
+.avatar_girl
+    border-radius: 100%
+    line-height: 0
+    img 
+        display: inline-block
+        border-radius: 100%
+        line-height: 0
+
+.title_style
+    margin-bottom: 5px
+    +textDecor(800,0.1em,0.30em)
+    font-size: 0.7em
+    &:hover
+        +color_hover()
+
+
+@media screen and (min-width: 1280px)
+    body 
+        padding: 100px 50px
+       

@@ -1,0 +1,59 @@
+footer 
+    position: relative
+    background-color: #493382
+    padding: 70px 110px
+    color: $footer_color
+    font-weight: bold
+    a 
+        position: absolute
+        left: 0
+        top: 0
+    .footer-info
+        font-size: $font_size_p
+        +flex(flex-start,flex-start,row)
+        div:nth-child(2)
+            border:
+                left: 1px solid $footer_color
+                right: 1px solid $footer_color
+            padding: 0 25px
+        div:first-child
+            padding-right: 25px
+        div:last-child
+            padding-left: 25px
+        div span 
+            border-color: $footer_color
+
+@media only screen and (max-width: 1680px)
+    footer
+        padding: 70px 80px
+
+@media only screen and (max-width: 1280px)
+    footer 
+        padding: $pad_main-1280px
+        .footer-info
+            font-size: 12px
+
+@media screen and (max-width: 980px)
+    footer
+        padding: $pad_main-980px
+        .footer-info
+            font-size: 12px
+
+@media screen and (max-width: 736px)
+    footer
+        padding: 60px 30px
+
+@media screen and (max-width: 480px)
+    footer
+        padding: $pad_main-480px
+        .footer-info
+            +flex(flex-start,flex-start,column)
+            div:nth-child(2)
+                border:
+                    left: none
+                    right: none
+                padding: 0
+                margin: 10px 0
+            div:last-child
+                padding-left: 0
+

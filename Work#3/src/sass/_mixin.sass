@@ -1,0 +1,15 @@
+@mixin transit($tp, $td, $ttf)
+    transition-property: $tp
+    transition-duration: $td
+    transition-timing-function: $ttf
+
+@mixin flex($jc, $ai, $fd)
+    display: flex
+    justify-content: $jc
+    align-items: $ai
+    flex-direction: $fd
+
+@mixin p_after-h2()
+    margin: 40px 0
+    line-height: 2em
+    font-size: $font_size_p

@@ -1,0 +1,90 @@
+.accordion
+    section
+        +flex(flex-start,flex-start,row)
+        background-color: #5052b5
+        img
+            display: inline-block
+            width: 422px
+            height: 392px
+        .secWithPhoto_blocks
+            +flex(center,flex-start,column)
+            widht: 70%
+            height: 100%
+            padding: 86px 15% 86px 110px
+            p 
+                +p_after-h2()
+                margin: 25px 0
+                font-size: 22px
+                line-height: 1.6em
+            h2 
+                color: $default_color
+        &:nth-child(2)
+            background-color: #5852b5
+        &:nth-child(3)
+            background-color: #5842b5
+
+@media only screen and (max-width: 1680px)
+    .accordion
+        section 
+            img 
+                height: 374px
+            .secWithPhoto_blocks
+                padding: 65px 80px
+                p 
+                    font-size: 16px
+
+@media only screen and (max-width: 1280px)
+    .accordion
+        position: relative
+        > a
+            position: absolute
+            left: 0
+            top: -50px
+        section 
+            +flex(flex-start,flex-start,row)
+            img 
+                width: 360px
+                height: 338px
+            .secWithPhoto_blocks
+                padding: 70px 50px 41px 65px
+                p 
+                    margin: 20px 0
+                    font-size: 16px
+
+@media screen and (max-width: 980px)
+    .accordion
+        section 
+            +flex(flex-start,flex-start,column)
+            img 
+                width: 100%
+                height: 391px
+            .secWithPhoto_blocks
+                padding: 60px 
+                width: 100%
+                p 
+                    margin: 20px 0
+                    font-size: 16px
+
+@media screen and (max-width: 736px)
+    .accordion
+        section 
+            .secWithPhoto_blocks
+                padding: 60px 30px
+                p 
+                    font-size: 16px
+
+
+@media screen and (max-width: 480px)
+    .accordion
+        section 
+            img 
+                width: 100%
+                height: 50vh
+            .secWithPhoto_blocks
+                padding: 50px 30px
+                p 
+                    line-height: 1.7em
+                    font-size: 16px
+
+            
+                

@@ -1,0 +1,91 @@
+.buttons
+    position: relative
+    padding-top: 60px
+    margin-bottom: 70px
+    background-color: #000
+    text-align: center
+    background: url(../img/buttons/fire-wings.png) 46% 79% no-repeat
+    background-size: 112% 113%
+    .buttons_text 
+        margin-bottom: 20px
+        letter-spacing: 0.03em
+    .buttons_wraper
+        padding: 40px 55px
+        width: 60%
+        margin: 0 auto
+        border-radius: $bdr_large
+        color: black
+        background-color: #fff
+        font-size: 20px
+        .question_wraper
+            +flex(center,stretch)
+            margin-bottom: 40px
+            color: black
+            font-weight: bold
+            .buttons_oneInCircule
+                position: relative
+                display: inline-block
+                font-size: 22px
+                &::before
+                    content: ''
+                    height: 50px
+                    width: 50px
+                    position: absolute
+                    top: -10px
+                    left: -19px
+                    border-radius: 100%
+                    background-color: rgba(0, 0, 0, 0.1)
+            p   
+                margin-left: 30px
+        button 
+            position: relative
+            padding: 20px 40px
+            margin-right: 10px
+            color: white 
+            font-size: 22px
+            outline: none
+            background-color: $c_text
+            border: none
+            border-radius: $bdr_large
+            cursor: pointer
+            &::after 
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                height: 54%
+                width: 100%
+                background-color: rgba(255, 255, 255, 0.3)
+                border-radius: 0% 19% 47% 47% / 0% 0% 50% 50% 
+
+
+@media screen and (max-width: 480px)
+    .buttons
+        padding: 35px 20px
+        margin-bottom: 0
+        .buttons_wraper
+            padding: 0
+            width: 100%
+            background-color: transparent
+            font-size: 18px
+            .question_wraper
+                color: white
+                margin-bottom: 15px
+                .buttons_oneInCircule
+                    display: none
+            button 
+                padding: 15px 40px
+                margin-right: 0
+                font-size: 18px
+                width: 100%
+                margin-bottom: 10px
+                &::after 
+                    border-top-left-radius: 10px
+                    border-top-right-radius: 10px
+                    
+           
+              
+
+
+
+

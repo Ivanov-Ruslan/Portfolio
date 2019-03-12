@@ -1,0 +1,111 @@
+.red-section
+    position: relative
+    padding: 70px 110px
+    background-color: #b74e91
+    a
+        position: absolute
+        left: 0
+        top: 0
+    h2
+        color: $default_color
+    p 
+        +p_after-h2()
+   
+    
+.tablet
+    +flex(flex-start,flex-start,row)
+    flex-wrap: wrap
+    margin-bottom: 30px
+    border: $styleBorder
+    border-radius: $border_rad-input
+    .tablet_block
+        position: relative
+        +flex(flex-start,flex-start,column)
+        width: 50%
+        padding: 50px 0 50px 100px
+        border-bottom: $styleBorder
+        background-color: rgba(255, 255, 255, 0.05)
+    p 
+        margin: 15px 0 0 0
+    h5
+        color: $default_color
+    .tablet_block:nth-child(odd)
+        border-right: $styleBorder
+    .tablet_block:nth-child(5)
+        border-bottom: none
+    .tablet_block:nth-child(6)
+        border-bottom: none
+    .fa
+        position: absolute
+        top: 45px
+        left: 50px
+        font-size: 40px
+        color: $default_color
+
+@media screen and (max-width: 1680px)
+    .red-section
+        padding: 70px 80px
+
+@media screen and (max-width: 1280px)
+    .red-section
+        position: relative
+        padding: $pad_main-1280px
+        > a
+            position: absolute
+            left: 0
+            top: -50px
+        p 
+            margin: 25px 0
+            line-height: 25px
+
+    .tablet
+        .tablet_block
+            padding: 50px 53px 50px 100px
+            p 
+                line-height: 25px
+                margin: 15px 0
+
+
+@media screen and (max-width: 980px)
+    .red-section
+        padding: $pad_main-980px
+        
+    .tablet
+        +flex(flex-start,flex-start,column)
+        flex-wrap: nowrap
+        .tablet_block
+            width: 100%
+            padding: 50px 100px 50px 100px
+            .fa 
+                left: 40px
+            
+@media screen and (max-width: 736px)
+    .red-section
+        padding: 60px 30px
+
+    .tablet
+        .tablet_block
+            padding: 35px 45px 35px 100px
+        .tablet_block:nth-child(odd)
+            border-right: none
+        .tablet_block:nth-child(5)
+            border-bottom: $styleBorder
+    
+
+@media screen and (max-width: 480px)
+    .red-section
+        padding: $pad_main-480px
+        p 
+            line-height: 1.5em
+    
+    .tablet
+        .tablet_block
+            padding: 80px 0 30px 30px
+            .fa
+                left: 30px
+                top: 25px
+        .tablet_block:nth-child(5)
+            border-bottom: $styleBorder
+        .tablet_block:nth-child(odd)
+            border-right: none
+

@@ -1,0 +1,35 @@
+@mixin flex($jc, $ac, $fd)
+    display: flex
+    justify-content: $jc
+    align-content: $ac
+    flex-direction: $fd
+
+@mixin style_letter($fw, $ws, $ls)
+    text-transform: uppercase
+    font-weight: $fw
+    word-spacing: $ws
+    letter-spacing: $ls
+
+@mixin hover-BlueColor()
+    color: #9bf1ff
+    cursor: pointer
+
+// миксины для позиционирования бекграуда картинок
+@mixin bg($adress, $repeat, $size)
+    background-image: $adress 
+    background-repeat: $repeat
+    background-size: $size
+
+//  стили для изменение фона картинок
+@mixin color-imageEfect($bgCol) 
+    content: ''
+    position: absolute
+    display: block
+    background-color: $bgCol
+    opacity: 0.8
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+ 

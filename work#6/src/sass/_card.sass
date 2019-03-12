@@ -1,0 +1,98 @@
+.wraper_card
+    padding: 0 20px
+    .border_for_card
+        padding: 45px 0
+        border:
+            top: $border-style
+            bottom: $border-style
+
+.card
+    margin-bottom: 40px
+    &:last-child
+        margin-bottom: 0
+    .head_img
+        width: 100%
+        overflow: hidden
+        img 
+            display: block
+            width: 100%
+            transition: transform 0.2s ease-out
+            &:hover
+                transform: scale(1.05)
+    .inside_card_wrapper
+        position: relative
+        padding: 20px
+        border: $border-style
+        border-top: none
+        background-color: #fff
+        .dates 
+            font-size: 0.6em
+        .avatar_girl
+            position: absolute
+            bottom: 20px
+            right: 20px 
+            img 
+                width: 40px
+
+
+@media screen and (min-width: 736px)
+    .wraper_card
+        padding-left: 40px
+        padding-right: 40px
+
+    .border_for_card
+        +flex(space-between)
+        flex-wrap: wrap
+        .card
+            width: 47%
+            margin-bottom: 0
+            .head_img
+                height: 155px
+                width: 100%
+            &:nth-child(1)
+                margin-bottom: 35px
+            &:nth-child(2)
+                margin-bottom: 35px
+        .inside_card_wrapper
+            padding: 20px
+            .title_style
+                margin-bottom: 10px
+                font-size: 0.8em
+            .dates
+                font-size: 0.6em
+            .avatar_girl
+                bottom: 25px
+                right: 15px 
+                img 
+                    width: 40px
+
+                
+@media screen and (min-width: 980px)
+    .wraper_card
+        padding: 0 50px
+
+    .border_for_card
+        padding: 50px 0
+
+
+@media screen and (min-width: 1280px)
+    .wraper_card
+        float: left
+        width: 30%
+        padding: 0 50px 0 0
+        .border_for_card
+            display: block
+            padding: 50px 0 0 0
+            .card
+                margin-bottom: 30px
+                width: 100%
+                &:last-child
+                    margin-bottom: 50px
+                .head_img
+                    padding-bottom: 50%
+                    width: 100%
+                    overflow: hidden
+                   
+
+
+
